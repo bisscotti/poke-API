@@ -13,10 +13,12 @@ function App() {
     pokemonf();
   },[]);
   return (
-    <div className="App">
-      {pokemons.map((poke) => (
-          <Pokemon name={poke.name} url={poke.url}/>
-      ))}
+    <div className='main'>
+      <div className="App">
+        {pokemons.map((poke) => (
+            <Pokemon name={poke.name} url={poke.url}/>
+        ))}
+      </div>
     </div>
   );
 }

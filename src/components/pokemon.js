@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import styles from './pokemon.module.css';
 function Pokemon({name,url}){
     const [img, setImg] = useState('');
     useEffect(() => {
@@ -11,9 +12,11 @@ function Pokemon({name,url}){
         fetching();
     }, [url]);
     return(
-        <div>
-            <p>{name}</p>
-            <img src={img} alt="pokemon" />
+        <div className={styles.container}>
+            <div className={styles.imageContainer}>
+                <img src={img} alt="pokemon" className={styles.image}/>
+            </div>
+            <p className={styles.text}>{name}</p>
         </div>
     )
 }
